@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Transaction Simulation</title>
+</head>
+<body>
+    <h2>Bank Transaction Simulator</h2>
+    <p id="balanceDisplay">Initial Balance: ₹1000</p>
+
+    <script>
+         
+        let balance = 1000;
+
+         
+        balance += 500;
+
+         
+        balance -= 300;
+
+         
+        balance += balance * 0.05;
+
+        
+        document.getElementById("balanceDisplay").innerHTML = 
+            "Final Balance: ₹" + balance.toFixed(2);
+    </script>
+</body>
+</html>
