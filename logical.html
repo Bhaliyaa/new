@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+  function canVote(age,isCitizen){
+    return age>=18 && isCitizen ===true;
+  }
+  let result=canVote(20,true);
+  document.getElementById("demo").innerHTML="canVote:"+" "+result;
+</script>
+
+</body>
+</html>
