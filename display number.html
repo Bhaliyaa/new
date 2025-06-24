@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+  <title>Object Handling - Display Name & Skills</title>
+</head>
+<body>
+  <h1>Display Name and Skills from Object</h1>
+
+  <button onclick="displayPersonSkills()">Show Person Info</button>
+  <p id="output"></p>
+
+  <script>   
+    const person = {
+      name: "MITESH",
+      age: 19,
+      skills: ["HTML", "CSS",]
+    };
+    
+    function displayPersonSkills() {
+      const sentence = `Name: ${person.name} | Skills: ${person.skills.join(", ")}`;
+      console.log(sentence);
+      document.getElementById("output").textContent = sentence;
+    }
+  </script>
+</body>
+</html>

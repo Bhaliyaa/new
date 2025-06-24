@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>DOM Manipulation - Button Click</title>
+</head>
+<body>
+  <h1>DOM Manipulation: Show Message on Button Click</h1>
+
+  <button id="myButton">Click Me</button>
+  <div id="message"></div>
+
+  <script>
+    
+    const button = document.getElementById("myButton");
+    const messageDiv = document.getElementById("message");
+
+     
+    button.addEventListener("click", function() {
+      messageDiv.innerText = "NAME: MITESH BHALIYA";
+      console.log("NAME: MITESH BHALIYA");  
+    });
+  </script>
+</body>
+</html>

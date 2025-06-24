@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Array Manipulation - Double Numbers</title>
+</head>
+<body>
+  <h1>Double Each Number in an Array</h1>
+
+  <p>Original array: <strong>[3, 7, 12, 19]</strong></p>
+  <button onclick="doubleArray()">Double the Numbers</button>
+
+  <p id="result"></p>
+
+  <script>
+     
+    function doubleArray() {
+      const numbers = [2, 5, 8, 10];
+      const doubled = numbers.map(num => num * 2);
+ 
+      document.getElementById("result").textContent = "Doubled array: [" + doubled.join(", ") + "]";
+      console.log("Original:", numbers);
+      console.log("Doubled: ", doubled);
+    }
+  </script>
+</body>
+</html>

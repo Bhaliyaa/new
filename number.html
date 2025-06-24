@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Check Number</title>
+</head>
+<body>
+  <h1>Check if a Number is Positive, Negative, or Zero</h1>
+
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="runCheck()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+     
+    function checkNumber(num) {
+      if (num > 0) {
+        return "Positive";
+      } else if (num < 0) {
+        return "Negative";
+      } else {
+        return "Zero";
+      }
+    }
+
+    
+    function runCheck() {
+      const input = document.getElementById("numberInput").value;
+      const num = Number(input);
+      const result = checkNumber(num);
+      document.getElementById("result").textContent = "Result: " + result;
+      console.log("Input:", num, "→", result);
+    }
+  </script>
+</body>
+</html>
