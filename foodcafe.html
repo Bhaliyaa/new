@@ -1,0 +1,289 @@
+<html>
+    <head>
+        <title>CAFE</title>
+  <link rel="stylesheet" href="cafe.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    </head>
+        <body>
+          <input type="checkbox" id="login">
+<div class="topbar">
+    <div class="left">
+ <span>Follow On:</span>
+      <ul class="list">
+      <li><i class="fab fa-facebook-f"></i></li>
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-instagram"></i></li>
+      </ul>
+    </div>
+    <div class="center">
+              <h1>FOOD CAFE</h1>
+    </div>
+    <div class="right">
+ <div class="lang">
+        <i class="fas fa-globe"></i><select>
+          <option>English</option>
+           <option>Italian</option>
+            <option>France</option>
+             <option>Spaish</option>
+              <option>German</option>
+        </select>
+      </div>
+    <label for="login">LOGIN</label>
+    </div>
+</div>
+ <div class="login-panel">
+    <!-- Close Button -->
+    <label for="login" class="close-btn">&times;</label>
+    
+    <h2>LOGIN</h2>
+    
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <p class="error-msg">please fill all the details</p>
+
+    <button class="submit-btn">Submit</button>
+  </div>
+<nav class="nav">
+    <ul>
+    <div class="dropdown">
+      <a href="#">Home</a>
+      <div class="dropdown-content">
+        <a href="#">Home1</a>
+        <a href="#">Home2</a>
+        <a href="#">Home3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">About Us</a>
+      <div class="dropdown-content">
+        <a href="#">Our Team</a>
+        <a href="#">Our Story</a>
+        <a href="#">Mission</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="#">Web Design</a>
+        <a href="#">Development</a>
+        <a href="#">Marketing</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Gallery</a>
+      <div class="dropdown-content">
+        <a href="#">Photos</a>
+        <a href="#">Videos</a>
+        <a href="#">Events</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Contact Us</a>
+      <div class="dropdown-content">
+        <a href="#">Email</a>
+        <a href="#">Phone</a>
+        <a href="#">Map</a>
+      </div>
+    </div>
+  
+    </ul>
+  </nav>
+   <div class="slide">
+  <div class="slider">
+   
+    <img id="slide" src="https://www.morrisons.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffood-to-order-products.c9b04881.jpg&w=1920&q=75" alt="Image Slider"alt="Image Slider">
+    <button onclick="prevSlide()">&#10094; </button>
+    <button onclick="nextSlide()"> &#10095;</button>
+    </div>
+</div>
+<br>
+
+
+
+
+   <script>
+   const images = ["https://www.morrisons.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffood-to-order-products.c9b04881.jpg&w=1920&q=75",
+   " https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?s=612x612&w=0&k=20&c=eaKRSIAoRGHMibSfahMyQS6iFADyVy1pnPdy1O5rZ98=", 
+   "https://img.freepik.com/free-photo/flat-lay-table-full-delicious-food-arrangement_23-2149141378.jpg?semt=ais_hybrid&w=740"];
+let currentIndex = 0;
+
+function updateImage() {
+    document.getElementById("slide").src = images[currentIndex];
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+}
+
+
+function abc(item){
+  document.getElementById('sio').src=item
+}
+
+  function a(category){
+      const allCards = document.querySelectorAll('.card');
+      allCards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    a('all');
+   </script>
+   
+   <div class="menu">
+  <div class="main">
+  <button onclick="abc('https://media.istockphoto.com/id/1434086811/photo/empty-coffee-shop-interior-with-coffee-maker-pastries-and-blank-poster-on-the-wall.jpg?s=1024x1024&w=is&k=20&c=LMHyF2Q05H5hHCJiYSks6OYCvZmqwKwsNQUyLOiXpWA=')">Home</button>
+  <button onclick="abc('https://media.istockphoto.com/id/1198944463/photo/i-hope-youll-like-you-coffee.jpg?s=612x612&w=0&k=20&c=eslyE35TtIZb0M1DOt1RCjd0JzBPwkwA-ZQQs85Z6cQ=')">Service</button>
+  <button onclick="abc('https://thumbs.dreamstime.com/b/woman-laptop-happy-phone-call-coffee-shop-source-interview-story-research-news-information-remote-woman-laptop-353694933.jpg')">Contact</button>
+</div>
+<div class="slide2">
+ <img id="sio" src="https://media.istockphoto.com/id/1434086811/photo/empty-coffee-shop-interior-with-coffee-maker-pastries-and-blank-poster-on-the-wall.jpg?s=1024x1024&w=is&k=20&c=LMHyF2Q05H5hHCJiYSks6OYCvZmqwKwsNQUyLOiXpWA=" alt="Image Slider">
+ 
+ </div>
+</div>
+
+<div class="fullmenu">
+ 
+<div class="click">
+  <div class="buttons">
+    <li  onclick="a('coffee')">Coffee</li>
+    <li onclick="a('colddrink')">Colddrink</li>
+    <li onclick="a('fastfood')">Fastfood</li>
+    <li onclick="a('tea')">Tea</li>
+    <li onclick="a('all')">All</li>
+  </div>
+  </div>
+
+  <div class="choose">
+     
+    <div class="card coffee">
+      <img src="https://www.shutterstock.com/shutterstock/photos/163882571/display_1500/stock-photo-cofe-americano-with-cake-on-white-background-163882571.jpg" alt="Cappuccino">
+    
+    </div>
+    <div class="card coffee">
+      <img src="https://media.gettyimages.com/id/1434303312/photo/feshly-brewed-latte-coffee-on-a-white-table.jpg?s=612x612&w=gi&k=20&c=HqY1OMBzN6cTeSKMuDu2pjOfxlmNFqVhsehsXEcGRLw=" alt="Espresso">
+       
+    </div>
+    
+    <div class="card coffee">
+      <img src="https://content.jdmagicbox.com/comp/palakkad/z9/9999px491.x491.110302132630.s3z9/catalogue/arc-cofe-say-palakkad-coffee-shops-833hy.jpg" alt="Pepsi">
+      
+    </div>
+    <div class="card coffee">
+      <img src="https://static7.depositphotos.com/1158226/742/i/450/depositphotos_7420372-stock-photo-strange-golden-smoke-taking-away.jpg" alt="Coke">
+       
+    </div>
+
+ 
+    <div class="card colddrink">
+      <img src=" https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content8080.jpg" alt="Pepsi">
+      
+    </div>
+    <div class="card colddrink">
+      <img src=" https://www.totaltv.in/wp-content/uploads/2025/03/5111-scaled.jpg" alt="Coke">
+     
+    </div>
+ 
+    <div class="card colddrink">
+      <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content8080.jpg " alt="Pepsi">
+      
+    </div>
+    <div class="card colddrink">
+      <img src="https://www.metro.co.in/img/Corbonated-Soft-Drinks-464X226.jpg" alt="Coke">
+       
+    </div>
+
+    
+    <div class="card fastfood">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw06qvcHivNTNdx7LNvfddhFzkqbpZo7G2m-I1XJIRYxNibjrywhvRd0Anz7zvTk11O5k&usqp=CAU" alt="Burger">
+       
+    </div>
+    <div class="card fastfood">
+      <img src=" https://pentagonfoodgroup.co.uk/blog/wp-content/uploads/2022/07/fast-food.jpg" alt="Pizza">
+       
+    </div>
+ <div class="card fastfood">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/c0/23/1b/stephen-street-store.jpg" alt="Burger">
+       
+    </div>
+    <div class="card fastfood">
+      <img src="https://static9.depositphotos.com/1588534/1095/i/450/depositphotos_10957218-stock-photo-hamburger-and-fries.jpg" alt="Pizza">
+       
+    </div>
+
+   
+    <div class="card tea">
+      <img src="https://uzhavarbumi.s3.ap-south-1.amazonaws.com/uploads/at0X3L3commbLfoPRoWCfccwwGPT5RDmmGWkaxmb.jpg" alt="Green Tea">
+      
+    </div>
+    <div class="card tea">
+      <img src="https://static.toiimg.com/photo/104368492.cms" alt="Black Tea">
+      
+    </div>
+    <div class="card tea">
+      <img src="https://www.munatycooking.com/wp-content/uploads/2024/04/Three-glasses-filled-with-karak-chai.jpg" alt="Green Tea">
+       
+    </div>
+    <div class="card tea">
+      <img src=" https://recipe52.com/wp-content/uploads/2023/11/Karak-Chai-4.jpg" alt="Black Tea">
+      
+    </div>
+    </div>
+    </div>
+
+
+    <div class="part1">
+  
+      <h2>GET IN TOUCH</h2>
+
+      <div class="form-group">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+      
+      <p class="error">Please Fill The Field</p>
+
+      <div class="form-single">
+        <input type="password" placeholder="Password">
+      </div>
+
+      <div class="form-single">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+      </div>
+      <div class="sub">
+      <button class="submit-btn">Submit</button>
+    </div>
+    
+</div>
+</div>
+
+   
+</div>
+ <div class="co_mouse">
+  <div class="co_main">
+  
+                <div class="button-main">
+                    <button>our story</button>
+                    <button>mission</button>
+                    <button>vision</button>
+                 </div>
+                 
+  </div>             
+        </div>
+
+
+        </body>
+    
+</html>
